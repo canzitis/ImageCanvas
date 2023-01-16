@@ -52,9 +52,11 @@ const ImageCanvas = ({scrollHeight, numFrames, width, height}) => {
       return;
     }
 
+    if(frameIndex == 241)  return
+
     const context = canvasRef.current.getContext("2d");
     let requestId;
-
+    console.log(frameIndex)
     const render = () => {
       context.drawImage(images[frameIndex], 0, 0);
       requestId = requestAnimationFrame(render);
