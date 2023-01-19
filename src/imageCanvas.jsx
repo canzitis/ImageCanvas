@@ -52,8 +52,6 @@ const ImageCanvas = ({scrollHeight, numFrames, width, height}) => {
       return;
     }
 
-    if(frameIndex == 241)  return
-
     const context = canvasRef.current.getContext("2d");
     let requestId;
     console.log(frameIndex)
